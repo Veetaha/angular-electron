@@ -9,11 +9,11 @@ import * as fs from 'fs';
 @Injectable()
 export class ElectronService {
 
-  ipcRenderer: typeof ipcRenderer;
-  webFrame: typeof webFrame;
-  remote: typeof remote;
-  childProcess: typeof childProcess;
-  fs: typeof fs;
+  ipcRenderer!: typeof ipcRenderer;
+  webFrame!: typeof webFrame;
+  remote!: typeof remote;
+  childProcess!: typeof childProcess;
+  fs!: typeof fs;
 
   constructor() {
     // Conditional imports

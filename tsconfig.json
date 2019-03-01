@@ -1,28 +1,55 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
+    "compileOnSave": false,
+    "compilerOptions": {
+        "outDir":           "./dist/out-tsc",
+        "target":           "esnext",
+        "moduleResolution": "node",
+
+        "typeRoots": ["node_modules/@types", "src/app/ambient-declarations"],
+        "lib":       ["esnext", "dom"],
+
+        "baseUrl": "src/app",
+        "paths": {
+            "@src/*":          [ "./../*"                    ],
+            "@app/*":          [ "./*"                       ],
+            "@utils/*":        [ "./utils/*"                 ],
+            "@modules/*":      [ "./modules/*"               ],
+            "@directives/*":   [ "./directives/*.directive"  ],
+            "@components/*":   [ "./components/*"            ],
+            "@services/*":     [ "./services/*.service"      ]
+        },
+
+        "sourceMap":    true,
+        "declaration":  false,
+
+        "esModuleInterop":              true, 
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators":       true,
+        "emitDecoratorMetadata":        true,
+        /* Checking severity level */
+        "strict":                           true,
+        "noUnusedLocals":                   true,
+        "noUnusedParameters":               true,
+        "noImplicitAny":                    true,
+        "noImplicitThis":                   true,
+        "noImplicitReturns":                true,
+        "noFallthroughCasesInSwitch":       true,
+        "noStrictGenericChecks":            false,
+        "strictBindCallApply":              true,
+        "strictFunctionTypes":              true,
+        "strictNullChecks":                 true,
+        "strictPropertyInitialization":     true,
+        "allowUnreachableCode":             false,
+        "forceConsistentCasingInFileNames": true,
+        /* Misc */
+        "alwaysStrict": true,
+        "pretty":       true
+    },
+    "include": [
+        "main.ts",
+        "src/**/*"
     ],
-    "lib": [
-      "es2017",
-      "es2016",
-      "es2015",
-      "dom"
+    "exclude": [
+        "node_modules"
     ]
-  },
-  "include": [
-    "main.ts",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
 }

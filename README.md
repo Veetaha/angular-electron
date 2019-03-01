@@ -1,4 +1,4 @@
-#electron-angular-template 
+# electron-angular-template 
 
 This is a template project to start writing *Electron 4+* applications with 
 *Angular 7+* framework.

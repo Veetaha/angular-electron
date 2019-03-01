@@ -4,7 +4,7 @@ import { BrowserModule    } from '@angular/platform-browser';
 import { NgModule         } from '@angular/core';
 import { FormsModule      } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from '@modules/app-routing.module';
+import { AppRoutingModule } from '@modules/app-routing';
 import { ElectronService  } from '@services/electron';
 import { AppComponent     } from '@components/app';
 import { HomeComponent    } from '@components/windows/home';

@@ -13,7 +13,7 @@
             "@src/*":          [ "./../*"                    ],
             "@app/*":          [ "./*"                       ],
             "@utils/*":        [ "./utils/*"                 ],
-            "@modules/*":      [ "./modules/*"               ],
+            "@modules/*":      [ "./modules/*.module"        ],
             "@directives/*":   [ "./directives/*.directive"  ],
             "@components/*":   [ "./components/*"            ],
             "@services/*":     [ "./services/*.service"      ]
